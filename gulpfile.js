@@ -36,7 +36,8 @@ gulp.task('assets', function() {
 // browsersync
 gulp.task('browser-sync', function() {
 	browserSync.init({
-		proxy: 'localhost:8080'
+		proxy: 'jasonmac.local:8080',
+		host: 'jasonmac.local'
 	});
     gulp.watch(source+'/**/*.html', gulp.series('html', 'watch-files'));
 	gulp.watch(source+'/images/**/*', gulp.series('images', 'watch-files'));
